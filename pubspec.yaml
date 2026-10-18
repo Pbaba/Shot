@@ -1,0 +1,57 @@
+name: shot
+description: "Shot - Keep what matters. A local-first screenshot decluttering application."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.4.0 <4.0.0'
+  flutter: '>=3.22.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.6.1
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Local Persistence (SQLite)
+  drift: ^2.20.0
+  drift_flutter: ^0.2.0
+  sqlite3_flutter_libs: ^0.5.24
+
+  # Media Library Access
+  photo_manager: ^3.11.0
+  photo_manager_image_provider: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  
+  # Drift Code Generation
+  drift_dev: ^2.20.0
+  build_runner: ^2.4.9
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/fonts/
+
+  fonts:
+    - family: LibreBaskerville
+      fonts:
+        - asset: assets/fonts/LibreBaskerville-Regular.ttf
+        - asset: assets/fonts/LibreBaskerville-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/LibreBaskerville-Italic.ttf
+          style: italic
+
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/InterVariable.ttf
+          weight: 100
+          # Variable font supports weights 100–900.
